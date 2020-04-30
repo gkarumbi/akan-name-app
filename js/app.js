@@ -1,16 +1,37 @@
 //Function that outputs the day of the week
 
+var centuryDigits = parseInt(prompt("Enter the Century you were born "));
+var yearDigits = parseInt(prompt("Enter the year of Birth"));
+var month = parseInt(prompt("Enter mont of birth"));
+var dayOfMonth = parseInt(prompt("Enter date of birth"));
+
+//alert(typeof centuryDigits);
+
+if ((dayOfMonth<=0 || dayOfMonth>31) &&   (month<=0 || month>12)) {
+    
+    var dayOfMonth = parseInt(prompt("Enter date of birth that is between 0 and 31"));
+
+    var month = parseInt(prompt("Enter month of birth that is between 1 and 12"));
+
+}
+ 
+
 
 var dayOfWeek = function(centuryDigits,yearDigits,month,dayOfMonth){
 
+    
     var weekDay =  ( ( (centuryDigits/4) -2*centuryDigits-1) + ((5*yearDigits/4) ) + ((26*(month+1)/10)) + dayOfMonth ) %7;
     
     return Math.round(weekDay);
+
+     
+
 };
 
-var result = (dayOfWeek(19,88,5,31));
+alert(dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
+var result = (dayOfWeek());
 
-alert(result);
+//alert(result);
 
 
 var femaleNames = ["Akosua", "Adwoa", "Abenaa" ," Akua", "Yaa", "Afua","Ama"];
