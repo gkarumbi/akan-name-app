@@ -13,28 +13,54 @@ var result = (dayOfWeek(19,88,5,31));
 alert(result);
 
 
-var femaleNames = {};
+var femaleNames = ["Akosua", "Adwoa", "Abenaa" ," Akua", "Yaa", "Afua","Ama"];
 
 var maleNames = ["Kwasi","Kwadwo","Kwabena"," Kwaku" , "Yaw", " Kofi","Kwame"];
 
+var isMale = false;
+var isFemale = false;
 
+var getFemaleName =function(isFemale){
 
- namelength = maleNames.length;
+    if (!isFemale) {
 
- for (let index = 0; index < maleNames.length; index++) {
-     if (index == result) {
-         
-        alert(maleNames[result]);
+        for (let index = 0; index < femaleNames.length; index++) {
+            if (index == result) {
+                
+               alert(femaleNames[result]);
+               
+                
+            }     
+            
+            
+            
+        }
+
+        return femaleNames[result];
+    }
+
+}
+
+var getMaleName = function(isMale){
+
+    if (!isMale) {
+        for (let index = 0; index < maleNames.length; index++) {
+            if (index == result) {
+                
+               alert(maleNames[result]);               
+                
+            }     
+            
+                       
+        }       
+       
+        return maleNames[result];
         
-         
-     }     
-     
-     else {
-        continue
-         
-        alert("Got it");
+    }
 
-        
-     }
-     
- }
+}
+ 
+getFemaleName();
+
+ 
+ 
