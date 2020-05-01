@@ -1,22 +1,35 @@
+//Add listening functionality
+
+var btnListener  = document.getElementById("submit");
+btnListener.addEventListener("click",function(){
+      
+
+
+
 //Function that outputs the day of the week
 
-var centuryDigits = parseInt(prompt("Enter the Century you were born "));
-var yearDigits = parseInt(prompt("Enter the year of Birth"));
-var month = parseInt(prompt("Enter mont of birth"));
-var dayOfMonth = parseInt(prompt("Enter date of birth"));
 
-var gender = prompt("Please Enter Your Gener");
 
-// verify that (d<=0) or (d>31) (m<= 0) or (m > 12)  
 
-if ((dayOfMonth<=0 || dayOfMonth>31) &&   (month<=0 || month>12)) {
-    
-    var dayOfMonth = parseInt(prompt("Enter date of birth that is between 0 and 31"));
 
-    var month = parseInt(prompt("Enter month of birth that is between 1 and 12"));
 
-}
- 
+var yearOfBirth = document.getElementById("yob").value;
+
+var centuryDigits = parseInt(yearOfBirth.substring(-1,2));
+var yearDigits = parseInt(yearOfBirth.substring(2,4));
+var month = parseInt(document.getElementById("month").value);
+var dayOfMonth = parseInt(document.getElementById("date").value);
+var gender = document.getElementsByName("gender");
+
+// alert(yearOfBirth);
+// alert(centuryDigits);
+// alert(yearDigits);
+
+//alert(gender);
+
+
+
+
 
 
 var dayOfWeek = function(){
@@ -30,7 +43,7 @@ var dayOfWeek = function(){
 
 };
 
-alert(dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
+//alert(dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
 var result = (dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
 
 //alert(result);
@@ -40,90 +53,89 @@ var femaleNames = ["Akosua", "Adwoa", "Abenaa" ," Akua", "Yaa", "Afua","Ama"];
 
 var maleNames = ["Kwasi","Kwadwo","Kwabena"," Kwaku" , "Yaw", " Kofi","Kwame"];
 
-// var isMale =  function(gender){
-//     if (gender =="male") {
 
-//         return true;
-//     }
-    
-//     else if(gender){
-//         return false;
-//     }
-// }
-var isMale = false;
-var isFemale = false;
+
+var isMale =  document.getElementById("maleBox").checked ;
+var isFemale =  document.getElementById("femaleBox").checked ;
+
+// alert(isFemale);
+// alert(isMale)
 
 var girlname;
 
-var getFemaleName =function(isFemale){
+var getFemaleName =function(){
 
-    if (!isFemale) {
-
-        for (let index = 0; index < femaleNames.length; index++) {
-            if (index == result) {
+  
+    for (let index = 0; index < femaleNames.length; index++) {
+                if (index == result) {
+                    
+                   
+                girlname = femaleNames[result];
+                }                   
                 
-            //    alert(femaleNames[result]);
-               
-            girlname = femaleNames[result];
-            }     
-            
-            
-            
-        }
-
-        return girlname;
-    }
+                
+            }
+    
+            return girlname;
 
 }
+
 var boyname;
 
-var getMaleName = function(isMale){
+var getMaleName = function(){
 
-    if (!isMale) {
-        for (let index = 0; index < maleNames.length; index++) {
-            if (index == result) {
-                
-               //alert(maleNames[result]);   
-               boyname= maleNames[result];            
-                
-            }     
+    for (let index = 0; index < maleNames.length; index++) {
+        if (index == result) {
             
-                       
-        }       
-       
+          
+           boyname= maleNames[result];            
+            
+        }     
         
-        return boyname; 
-    }
-
+                   
+    }       
+   
+    
+    return boyname;
 }
  
-// var maleName = getMaleName();
-// var femaleName = getFemaleName();
-
-// alert(maleName);
-// alert(femaleName);
-
-
- var displayResults = function(gender){
-     var maleName = getMaleName();
+var maleName = getMaleName();
 var femaleName = getFemaleName();
 
-    if (gender == "male") {
+alert(maleName);
+alert(femaleName);
 
-        return maleName;
+
+// var displayResults = function(gender){
+//      var maleName = getMaleName();
+// var femaleName = getFemaleName();
+
+// // if (isFemale ==true) {
+// //     this.gender =document.getElementById("femaleBox").value;
+// //     return femaleName;
+
+    
+// // } else if (isMale ==true) {
+// //     return maleName;
+    
+// // }
+
+//     if ((gender.value ) == "male") {
+
+//         return maleName;
         
         
-    } else if(gender == "female") {
-        return femaleName;
-    }
- }
+//     } else if((gender.value )== "female") {
+//         return femaleName;
+//     }
+//  }
 
- var displayName =displayResults(gender);
+//  var displayName =displayResults(gender);
 
- alert(displayName);
+//  alert(displayName);
 
 
  
  
-
+});
  
