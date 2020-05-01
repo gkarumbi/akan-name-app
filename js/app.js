@@ -39,7 +39,7 @@ var dayOfWeek = function(){
 
 var result = (dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
 
-//alert(result);
+
 
 
 var femaleNames = ["Akosua", "Adwoa", "Abenaa" ," Akua", "Yaa", "Afua","Ama"];
