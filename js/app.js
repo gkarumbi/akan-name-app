@@ -9,8 +9,6 @@ btnListener.addEventListener("click",function(){
 //Function that outputs the day of the week
 
 
-
-
 var yearOfBirth = document.getElementById("yob").value;
 
 var centuryDigits = parseInt(yearOfBirth.substring(-1,2));
@@ -21,18 +19,12 @@ var gender;
 
 
 
-
-
-
-
 var dayOfWeek = function(){
 
     
     var weekDay =  ( ( (centuryDigits/4) -2*centuryDigits-1) + ((5*yearDigits/4) ) + ((26*(month+1)/10)) + dayOfMonth ) %7;
     
-    return Math.round(weekDay);
-
-     
+    return Math.round(weekDay);     
 
 };
 
