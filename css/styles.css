@@ -11,9 +11,11 @@ ul{
 .footer li{
     margin: 10px;
     color: white;
+   
 }
 
 a,a:hover{
     color: white;
     text-decoration: none;
 }
+
