@@ -17,13 +17,8 @@ var centuryDigits = parseInt(yearOfBirth.substring(-1,2));
 var yearDigits = parseInt(yearOfBirth.substring(2,4));
 var month = parseInt(document.getElementById("month").value);
 var dayOfMonth = parseInt(document.getElementById("date").value);
-var gender = document.getElementsByName("gender");
+var gender;
 
-// alert(yearOfBirth);
-// alert(centuryDigits);
-// alert(yearDigits);
-
-//alert(gender);
 
 
 
@@ -41,7 +36,7 @@ var dayOfWeek = function(){
 
 };
 
-//alert(dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
+
 var result = (dayOfWeek(centuryDigits,yearDigits,month,dayOfMonth));
 
 //alert(result);
@@ -108,22 +103,12 @@ var displayResults = function(gender){
      var maleName = getMaleName();
 var femaleName = getFemaleName();
 
-// if (isFemale ==true) {
-//     this.gender =document.getElementById("femaleBox").value;
-//     return femaleName;
-
-    
-// } else if (isMale ==true) {
-//     return maleName;
-    
-// }
-
-    if ((gender.value ) == "male") {
+    if (document.getElementById("maleBox").value  == "male") {
 
         return maleName;
         
         
-    } else if((gender.value )== "female") {
+    } else if(document.getElementById("femaleBox")== "female") {
         return femaleName;
     }
  }
