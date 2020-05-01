@@ -3,3 +3,17 @@ li{
     margin-left: 20px;
     
 }
+
+ul{
+    list-style: none;
+}
+
+.footer li{
+    margin: 10px;
+    color: white;
+}
+
+a,a:hover{
+    color: white;
+    text-decoration: none;
+}
