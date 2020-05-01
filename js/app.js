@@ -95,8 +95,8 @@ var getMaleName = function(){
 var maleName = getMaleName();
 var femaleName = getFemaleName();
 
-alert(maleName);
-alert(femaleName);
+// alert(maleName);
+// alert(femaleName);
 
 
 var displayResults = function(gender){
