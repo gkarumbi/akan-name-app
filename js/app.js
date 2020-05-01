@@ -11,8 +11,6 @@ btnListener.addEventListener("click",function(){
 
 
 
-
-
 var yearOfBirth = document.getElementById("yob").value;
 
 var centuryDigits = parseInt(yearOfBirth.substring(-1,2));
@@ -106,33 +104,33 @@ alert(maleName);
 alert(femaleName);
 
 
-// var displayResults = function(gender){
-//      var maleName = getMaleName();
-// var femaleName = getFemaleName();
+var displayResults = function(gender){
+     var maleName = getMaleName();
+var femaleName = getFemaleName();
 
-// // if (isFemale ==true) {
-// //     this.gender =document.getElementById("femaleBox").value;
-// //     return femaleName;
+// if (isFemale ==true) {
+//     this.gender =document.getElementById("femaleBox").value;
+//     return femaleName;
 
     
-// // } else if (isMale ==true) {
-// //     return maleName;
+// } else if (isMale ==true) {
+//     return maleName;
     
-// // }
+// }
 
-//     if ((gender.value ) == "male") {
+    if ((gender.value ) == "male") {
 
-//         return maleName;
+        return maleName;
         
         
-//     } else if((gender.value )== "female") {
-//         return femaleName;
-//     }
-//  }
+    } else if((gender.value )== "female") {
+        return femaleName;
+    }
+ }
 
-//  var displayName =displayResults(gender);
+ var displayName =displayResults();
 
-//  alert(displayName);
+ alert(displayName);
 
 
  
