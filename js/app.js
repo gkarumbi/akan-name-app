@@ -43,8 +43,6 @@ var maleNames = ["Kwasi","Kwadwo","Kwabena"," Kwaku" , "Yaw", " Kofi","Kwame"];
 var isMale =  document.getElementById("maleBox").checked ;
 var isFemale =  document.getElementById("femaleBox").checked ;
 
-// alert(isFemale);
-// alert(isMale)
 
 var girlname;
 
