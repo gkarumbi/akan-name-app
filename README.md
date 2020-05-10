@@ -20,7 +20,7 @@ Basic knowledge of HTML,Bootstrap CSS and Javascript
    * To run the application:
 
     - Clone Repository on Local Machine `git clone https://github.com/gkarumbi/akan-name-app.git`
-    - cd into Directory `cd portfolio-landing-page`
+    - cd into Directory `cd akan-name-app`
     - Open index.html on the browser
     - Enter your Year of Birth e.g 1988 , Month ofBirth e.g 5 for May and Date of Birth e.g 31 for May 31st and click submit!
     ### Development
